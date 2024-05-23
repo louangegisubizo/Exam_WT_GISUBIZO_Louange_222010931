@@ -17,3 +17,5 @@ Viewing Reports and Analytics:
 
 Users can access the "Reports" section to view visual representations and analytics of their financial data.
 They can upload saving goal and create a certain goal to be followed.
+username:lou
+password:12345
