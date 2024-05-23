@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Record Transaction</title>
+    <style type="text/css">
+        body {
+            background-image: url(img/img5.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login {
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+        }
+        .login .inner {
+            box-shadow: 0px 0px 10px #00000024;
+            border-radius: 5px;
+            overflow: hidden;
+            opacity: 100%;
+            display: flex;
+            background-color: white;
+        }
+        
+        .login .login-form {
+            padding: 50px 40px;
+            width: 50%;
+        }
+        .login .login-form h2 {
+            position: relative;
+            font-size: 32px;
+            color: #333;
+            font-weight: 600;
+            line-height: 27px;
+            text-transform: capitalize;
+            margin-bottom: 12px;
+            padding-bottom: 20px;
+        }
+        .login .login-form h2:before {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            width: 50px;
+            background: #1A76D1;
+        }
+        .login .login-form p {
+            font-size: 25px;
+            color: #333;
+            font-weight: 400;
+            text-align: left;
+            margin-bottom: 50px;
+        }
+        .login .login-form p a {
+            display: inline-block;
+            margin-left: 5px;
+            color: #1A76D1;
+        }
+        .login .login-form p a:hover {
+            color: #2C2D3F;
+        }
+        .login .form {
+            margin-top: 30px;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .login .form .form-group {
+            margin-bottom: 22px;
+        }
+        .login .form .form-group input {
+            width: 100%;
+            height: 50px;
+            border: 1px solid #eee;
+            padding: 0px 18px;
+            color: #555;
+            font-size: 14px;
+            font-weight: 300;
+            border-radius: 4px;
+        }
+        .login .form .form-group.login-btn {
+            margin: 0;
+        }
+        .login .form button {
+            border: none;
+        }
+        .login .form .btn {
+            display: inline-block;
+            margin-right: 10px;
+            color: #fff;
+            line-height: 20px;
+            width: 100%;
+            background: #1A76D1;
+            padding: 15px 0;
+            text-align: center;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .login .form .btn:hover {
+            background: #155a9a;
+        }
+        .login .login-form .checkbox {
+            text-align: left;
+            margin: 0;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .login .login-form .checkbox label {
+            position: relative;
+            padding-left: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            color: black;
+            font-style: bold;
+        }
+        .login .login-form .checkbox label input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .login .login-form .checkbox label span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 15px;
+            width: 15px;
+            background-color: #fff;
+            border: 1px solid #1A76D1;
+            border-radius: 4px;
+        }
+        .login .login-form .checkbox label input:checked ~ span {
+            background-color: #1A76D1;
+            border-color: #1A76D1;
+        }
+        .login .login-form .checkbox label span:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+        .login .login-form .checkbox label input:checked ~ span:after {
+            display: block;
+        }
+        .login .login-form .checkbox label span:after {
+            left: 5px;
+            top: 2px;
+            width: 5px;
+            height: 9px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+        .login .login-form .lost-pass {
+            display: inline-block;
+            margin-left: 25px;
+            color: #333;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        .login .login-form .lost-pass:hover {
+            color: #1A76D1;
+        }
+        .radio-group {
+        display: flex;
+        align-items: center;
+    }
+    .login .login-form .radio-group input[type="radio"] {
+        margin-right: 5px;
+    }
+    .login .login-form .radio-group label {
+        margin-right: 15px;
+        margin-bottom: 0;
+        color: black;
+    }
+    .login .login-form .radio-group label {
+        display: block;
+        
+    }
+    </style>
+</head>
+<body>
+    <body>
+    <div class="login">
+        <div class="inner">
+            <div class="login-form">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Record a Transaction</h2>
+                    </div>
+                    <form id="transaction" method="post" class="form">
+                        <div class="form-group">
+                            <label for="amount">Amount</label>
+                            <input type="number" step="0.01" id="amount" name="amount" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <input type="text" id="description" name="description" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="transaction_date">Transaction Date</label>
+                            <input type="date" id="transaction_date" name="transaction_date" required>
+                        </div>
+                        <div class="radio-group">
+                            <label for="type">TYPE:</label><br>
+                            <input type="radio" id="expense" name="type" value="expense" required>
+                            <label for="expense">EXPENSE</label><br>
+                            <input type="radio" id="revenue" name="type" value="revenue" required>
+                            <label for="revenue">REVENUE</label>
+                        </div>
+                        <button type="submit">Record Transaction</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    document.getElementById('transaction').addEventListener('submit', function(event) {
+        const form = event.target;
+        const type = document.querySelector('input[name="type"]:checked');
+
+        if (type) {
+            if (type.value === 'expense') {
+                form.action = 'expenses.php';
+            } else if (type.value === 'revenue') {
+                form.action = 'revenues.php';
+            }
+        } else {
+            alert('Please select the type of transaction.');
+            event.preventDefault();
+        }
+    });
+    </script>
+</body>
+</html>

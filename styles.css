@@ -1,0 +1,112 @@
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+  line-height: 1.6;
+  background-image: url(img/img3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+}
+
+/* Header styles */
+#header {
+  background: transparent;
+  color: #fff;
+  padding: 1rem 0;
+ }
+
+#header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header .logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#header .navbar {
+  display: flex;
+  align-items: center;
+}
+
+#header .navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+#header .navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s;
+}
+
+#header .navbar a:hover, #header .navbar .active {
+  background: #388E3C;
+  border-radius: 5px;
+}
+
+/* Hero section styles */
+#main {
+  padding: 2rem 0;
+}
+
+/* About Us section styles */
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.section-title p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Footer styles */
+#footer {
+  background: transparent;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+#footer h3 {
+  font-size: 1.8rem;
+  
+}
+
+#footer p {
+  font-size: 1rem;
+ 
+}
+
+#footer .social-links {
+  display: flex;
+  justify-content: center;
+ 
+}
+
+#footer .social-links a {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+#footer .social-links a:hover {
+  color: #ddd;
+}
+
+#footer .copyright {
+  font-size: 0.9rem;
+  color: #ccc;
+}
